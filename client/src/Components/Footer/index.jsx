@@ -1,12 +1,8 @@
 const Footer = () => {
   return (
-    <footer>
-      <p>
-        © 2025
-        <a target="_blank" href="https://github.com/joseisaacpy">
-          joseisaacpy
-        </a>{" "}
-        – Todos os direitos reservados.
+    <footer className="p-4 bg-black text-white text-center">
+      <p className="font-light">
+        &copy; 2025 <strong>joseisaacpy</strong> – Todos os direitos reservados.
       </p>
     </footer>
   );
