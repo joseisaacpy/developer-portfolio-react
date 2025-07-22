@@ -3,6 +3,7 @@ import logoImg from "../../assets/img/dev-jose.png";
 import { FaHome, FaUser, FaBriefcase, FaPhone } from "react-icons/fa";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 const Header = () => {
   // Estado pra controlar o menu
@@ -13,9 +14,11 @@ const Header = () => {
         {/* Navigation */}
         <nav className="w-full bg-orange-500 p-4 flex items-center justify-between md:justify-around">
           {/* Logo */}
-          <a
-            className="flex items-center gap-1 hover:scale-110 transition-all duration-300"
-            href="/"
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer flex items-center gap-1 hover:scale-110 transition-all duration-300"
           >
             <img
               src={logoImg}
@@ -26,7 +29,7 @@ const Header = () => {
             <span className="hidden md:flex text-lg font-bold">
               joseisaacpy
             </span>
-          </a>
+          </Link>
           {/* Menu burguer */}
           <IoMdMenu
             className="md:hidden text-3xl font-bold"
@@ -35,27 +38,44 @@ const Header = () => {
           {/* Ul */}
           <ul className="hidden md:flex items-center gap-4">
             <li>
-              <a className="transition-all hover:text-blue-950" href="/">
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer transition-all hover:text-blue-950"
+              >
                 Início
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="transition-all hover:text-blue-950" href="#hero">
+              <Link
+                to="sobre"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer transition-all hover:text-blue-950"
+              >
                 Sobre
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                className="transition-all hover:text-blue-950"
-                href="#projetos"
+              <Link
+                to="projetos"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer transition-all hover:text-blue-950"
               >
                 Projetos
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="transition-all hover:text-blue-950" href="#contato">
+              <Link
+                to="contato"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer transition-all hover:text-blue-950"
+              >
                 Contato
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
