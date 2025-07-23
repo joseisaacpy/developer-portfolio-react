@@ -2,6 +2,7 @@
 import Header from "../../Components/Header";
 import Home from "../../Components/Home";
 import Sobre from "../../Components/Sobre";
+import Tecnologias from "../../Components/Tecnologias";
 import Projetos from "../../Components/Projetos";
 import Contato from "../../Components/Contato";
 import Footer from "../../Components/Footer";
@@ -18,6 +19,10 @@ const SinglePage = () => {
       {/* Sobre */}
       <Element name="sobre" id="sobre">
         <Sobre />
+      </Element>
+      {/* Tecnologias */}
+      <Element name="tecnologias" id="tecnologias">
+        <Tecnologias />
       </Element>
       {/* Projetos */}
       <Element name="projetos" id="projetos">
