@@ -28,7 +28,7 @@ const Projetos = () => {
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      <h2 className="relative z-10 text-3xl font-bold text-center text-white mb-5">
+      <h2 className="relative z-10 text-3xl font-poppins-bold text-center text-white mb-5">
         Projetos
       </h2>
       <div

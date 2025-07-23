@@ -1,12 +1,17 @@
 @font-face {
-  font-family: Poppins;
+  font-family: "Poppins";
   src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins Bold";
+  src: url(./assets/fonts/Poppins-Bold.ttf);
 }
 
 @import "tailwindcss";
 
 @theme {
-  --font-poppins: Poppins, sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-poppins-bold: "Poppins Bold", sans-serif;
 }
 /* Animação da mãozinha */
 @keyframes wave {
