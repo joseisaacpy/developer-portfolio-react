@@ -60,7 +60,7 @@ const Header = () => {
                 to="home"
                 smooth={true}
                 duration={500}
-                className="cursor-pointer transition-all hover:text-blue-950"
+                className="cursor-pointer transition-all hover:underline"
               >
                 Início
               </Link>
@@ -71,7 +71,7 @@ const Header = () => {
                 smooth={true}
                 duration={500}
                 offset={-64}
-                className="cursor-pointer transition-all hover:text-blue-950"
+                className="cursor-pointer transition-all hover:underline"
               >
                 Sobre
               </Link>
@@ -82,7 +82,7 @@ const Header = () => {
                 smooth={true}
                 duration={500}
                 offset={-64}
-                className="cursor-pointer transition-all hover:text-blue-950"
+                className="cursor-pointer transition-all hover:underline"
               >
                 Projetos
               </Link>
@@ -93,7 +93,7 @@ const Header = () => {
                 smooth={true}
                 duration={500}
                 offset={-64}
-                className="cursor-pointer transition-all hover:text-blue-950"
+                className="cursor-pointer transition-all hover:underline"
               >
                 Contato
               </Link>
