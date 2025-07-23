@@ -4,15 +4,33 @@ import { FaHome, FaUser, FaBriefcase, FaPhone } from "react-icons/fa";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import { Link } from "react-scroll";
-
+import { useEffect } from "react";
 const Header = () => {
   // Estado pra controlar o menu
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
-      <header>
+      {/* fixed top-0 left-0 right-0 z-50 bg-slate-800 bg-opacity-80 backdrop-blur-sm shadow-md */}
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-slate-900 shadow-md backdrop-blur-sm"
+            : "bg-slate-800"
+        }`}
+      >
         {/* Navigation */}
-        <nav className="w-full bg-orange-500 p-4 flex items-center justify-between md:justify-around">
+        <nav className="w-full text-white p-4 flex items-center justify-between md:justify-around">
           {/* Logo */}
           <Link
             to="home"
@@ -52,6 +70,7 @@ const Header = () => {
                 to="sobre"
                 smooth={true}
                 duration={500}
+                offset={-64}
                 className="cursor-pointer transition-all hover:text-blue-950"
               >
                 Sobre
@@ -62,6 +81,7 @@ const Header = () => {
                 to="projetos"
                 smooth={true}
                 duration={500}
+                offset={-64}
                 className="cursor-pointer transition-all hover:text-blue-950"
               >
                 Projetos
@@ -72,6 +92,7 @@ const Header = () => {
                 to="contato"
                 smooth={true}
                 duration={500}
+                offset={-64}
                 className="cursor-pointer transition-all hover:text-blue-950"
               >
                 Contato
@@ -83,7 +104,7 @@ const Header = () => {
 
       {/* Menu mobile (só aparece no mobile e quando isOpen for true) */}
       {isOpen && (
-        <div className="md:hidden w-full h-screen fixed top-0 left-0 bg-orange-500 z-50 transition-all duration-300">
+        <div className="md:hidden w-full h-screen fixed top-0 left-0 bg-slate-950 text-white z-50 transition-all duration-300">
           <button
             className="absolute top-4 right-4 text-3xl cursor-pointer"
             onClick={() => setIsOpen(false)}
