@@ -1,6 +1,6 @@
 // Imports
 import logoImg from "../../assets/img/dev-jose.png";
-import { FaHome, FaUser, FaBriefcase, FaPhone } from "react-icons/fa";
+import { FaHome, FaUser, FaBriefcase, FaPhone, FaCode } from "react-icons/fa";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import { Link } from "react-scroll";
@@ -78,6 +78,17 @@ const Header = () => {
             </li>
             <li>
               <Link
+                to="tecnologias"
+                smooth={true}
+                duration={500}
+                offset={-64}
+                className="cursor-pointer transition-all hover:underline"
+              >
+                Tecnologias
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="projetos"
                 smooth={true}
                 duration={500}
@@ -132,6 +143,17 @@ const Header = () => {
                 href="#hero"
               >
                 <FaUser /> Sobre
+              </a>
+            </li>
+            <li>
+              <a
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+                className="text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
+                href="#tecnologias"
+              >
+                <FaCode /> Tecnologias
               </a>
             </li>
             <li>

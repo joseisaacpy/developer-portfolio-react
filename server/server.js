@@ -12,7 +12,7 @@ import projetoRouter from "./routes/projetos.router.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
-const port = 3000;
+const port = 3000 || process.env.PORT;
 
 // MIDDLEWARES
 app.use(express.json());
