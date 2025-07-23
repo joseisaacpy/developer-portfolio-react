@@ -2,6 +2,8 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 import { FaCoffee, FaLaptop } from "react-icons/fa";
 
+import { toast, ToastContainer } from "react-toastify";
+
 const Sobre = () => {
   return (
     <div className="py-16 bg-white text-gray-900 mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
@@ -32,13 +34,21 @@ const Sobre = () => {
           de novos desafios.
         </p>
         <a
-          href="/curriculo"
+          href="http://localhost:3000/curriculo"
+          onClick={() =>
+            toast.success(
+              "Currículo baixado com sucesso, agora vamos conversar!"
+            )
+          }
+          download
           target="_blank"
+          rel="noopener noreferrer"
           className="inline-block mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded shadow transition duration-300"
         >
           Baixar Currículo
         </a>
       </div>
+      <ToastContainer autoClose={4000} />
     </div>
   );
 };
