@@ -29,7 +29,18 @@ app.get("/curriculo", (req, res) => {
   res.download(filePath, "Curriculo-Jose-Isaac.pdf");
 });
 
+// CONEXÃO COM O BANCO DE DADOS
+connect();
+
+// EXPORTAÇÃO PARA VERCEL
+export default app; // usado por Node adapter abaixo
+
+// Para a Vercel rodar como função
+export const handler = (req, res) => {
+  app(req, res);
+};
+
 // OUVINTE DE SERVIDOR
-app.listen(port, () => {
-  console.log("Servidor rodando em http://localhost:" + port);
-});
+// app.listen(port, () => {
+//   console.log("Servidor rodando em http://localhost:" + port);
+// });
