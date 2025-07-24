@@ -12,7 +12,7 @@ import projetoRouter from "./routes/projetos.router.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 8080;
 
 // MIDDLEWARES
 app.use(express.json());
@@ -31,5 +31,5 @@ app.get("/curriculo", (req, res) => {
 
 // OUVINTE DE SERVIDOR
 app.listen(port, () => {
-  console.log("Servidor rodando em http://localhost:3000");
+  console.log("Servidor rodando em http://localhost:" + port);
 });
