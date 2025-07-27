@@ -9,7 +9,7 @@ const Projetos = () => {
   // Função para buscar os projetos da API
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/projetos");
+      const response = await fetch("http://localhost:8080/api/projetos");
       const data = await response.json();
       setProjetos(data);
     } catch (error) {
