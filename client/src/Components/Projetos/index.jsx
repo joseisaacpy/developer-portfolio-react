@@ -1,21 +1,24 @@
 import techsBg from "../../assets/img/background-techs.webp";
+import Loader from "../Loader";
 import { FaMessage } from "react-icons/fa6";
 import { FaCalendar, FaStar, FaCode, FaLink } from "react-icons/fa";
 
 import { useState, useEffect } from "react";
 const Projetos = () => {
   const [projetos, setProjetos] = useState([]); // Estado para armazenar os projetos
+  const [loading, setLoading] = useState(true); // Estado para controlar o carregamento (começa como true para mostrar o loader)
 
   // Função para buscar os projetos da API
   const fetchData = async () => {
     const url = import.meta.env.VITE_API_URL;
     try {
       const response = await fetch(`${url}/api/projetos`);
-      console.log(response);
       const data = await response.json();
       setProjetos(data);
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false); // Desativa o carregamento quando os projetos forem carregados
     }
   };
 
@@ -33,6 +36,9 @@ const Projetos = () => {
       <h2 className="relative z-10 text-3xl font-poppins-bold text-center text-white mb-5">
         Projetos
       </h2>
+
+      {/* Loader overlay */}
+      {loading && <Loader />}
       <div
         id="container-projetos"
         className="relative z-10 grid p-2 items-center justify-center m-auto grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3"
