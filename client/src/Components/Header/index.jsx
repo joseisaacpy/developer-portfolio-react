@@ -50,7 +50,7 @@ const Header = () => {
           </Link>
           {/* Menu burguer */}
           <IoMdMenu
-            className="md:hidden text-3xl font-bold"
+            className="md:hidden cursor-pointer text-3xl font-bold"
             onClick={() => setIsOpen(!isOpen)}
           />
           {/* Ul */}
@@ -124,59 +124,69 @@ const Header = () => {
           </button>
           <ul className="h-full flex flex-col items-center justify-center gap-6">
             <li>
-              <a
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
                 onClick={() => {
                   setIsOpen(false);
                 }}
                 className="text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-                href=""
               >
                 <FaHome /> Início
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
+                to="sobre"
+                smooth={true}
+                duration={500}
                 onClick={() => {
                   setIsOpen(false);
                 }}
                 className="text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-                href="#hero"
               >
                 <FaUser /> Sobre
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
+                to="tecnologias"
+                smooth={true}
+                duration={500}
                 onClick={() => {
                   setIsOpen(false);
                 }}
                 className="text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-                href="#tecnologias"
               >
                 <FaCode /> Tecnologias
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
+                to="projetos"
+                smooth={true}
+                duration={500}
                 onClick={() => {
                   setIsOpen(false);
                 }}
                 className="text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-                href="#projetos"
               >
                 <FaBriefcase /> Projetos
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
+                to="contato"
+                smooth={true}
+                duration={500}
                 onClick={() => {
                   setIsOpen(false);
                 }}
                 className="text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-                href="#contato"
               >
                 <FaPhone /> Contato
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
