@@ -8,8 +8,10 @@ const Projetos = () => {
 
   // Função para buscar os projetos da API
   const fetchData = async () => {
+    const url = import.meta.env.VITE_API_URL;
     try {
-      const response = await fetch("http://localhost:8080/api/projetos");
+      const response = await fetch(`${url}/api/projetos`);
+      console.log(response);
       const data = await response.json();
       setProjetos(data);
     } catch (error) {
