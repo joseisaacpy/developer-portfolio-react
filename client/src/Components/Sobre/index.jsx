@@ -5,6 +5,7 @@ import { FaCoffee, FaLaptop } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 
 const Sobre = () => {
+  const url = import.meta.env.VITE_API_URL;
   return (
     <div className="py-16 bg-white text-gray-900 mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
       <div className="w-full md:w-1/3 flex justify-center">
@@ -34,7 +35,7 @@ const Sobre = () => {
           de novos desafios.
         </p>
         <a
-          href="http://localhost:3000/curriculo"
+          href={`${url}/curriculo`}
           onClick={() =>
             toast.success(
               "Currículo baixado com sucesso, agora vamos conversar!"
@@ -48,7 +49,7 @@ const Sobre = () => {
           Baixar Currículo
         </a>
       </div>
-      <ToastContainer autoClose={4000} />
+      <ToastContainer />
     </div>
   );
 };
