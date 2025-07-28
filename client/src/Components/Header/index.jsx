@@ -1,5 +1,5 @@
 // Imports
-import logoImg from "../../assets/img/dev-jose.png";
+import logoImg from "../../assets/img/dev-jose.webp";
 import { FaHome, FaUser, FaBriefcase, FaPhone, FaCode } from "react-icons/fa";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { useState } from "react";

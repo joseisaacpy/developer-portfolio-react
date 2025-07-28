@@ -16,7 +16,7 @@ const Sobre = () => {
       </div>
 
       <div className="w-full md:w-2/3 text-center md:text-left">
-        <h2 className="text-3xl font-poppins-bold mb-4 text-blue-600">
+        <h2 className="text-3xl font-bold mb-4 text-blue-600">
           Sobre Mim
           <FaCoffee className="inline-block ml-2" />
           <FaLaptop className="inline-block ml-2" />
