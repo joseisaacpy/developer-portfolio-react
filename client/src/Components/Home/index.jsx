@@ -1,8 +1,19 @@
-// Components
+// imagem hero
+import heroImage from "../../assets/img/hero-image.webp";
 const Home = () => {
   return (
     <>
-      <section className="relative flex flex-col items-center justify-center h-[100vh] bg-cover bg-center bg-no-repeat bg-[url('https://joseisaacpy.github.io/developer-portfolio/img/hero/hero-image.webp')] text-white">
+      {/* <section className="relative flex flex-col items-center justify-center h-[100vh] bg-cover bg-center bg-no-repeat bg-[url('https://joseisaacpy.github.io/developer-portfolio/img/hero/hero-image.webp')] text-white"> */}
+
+      <section className="relative flex flex-col items-center justify-center h-screen text-white">
+        <img
+          src={heroImage}
+          alt="Imagem Hero"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          loading="eager"
+          fetchpriority="high"
+        />
+
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="p-2 relative z-10 flex flex-col gap-2 items-center justify-center h-full text-white text-center">
           <h1 className="text-4xl md:text-6xl font-poppins-bold text-center">
