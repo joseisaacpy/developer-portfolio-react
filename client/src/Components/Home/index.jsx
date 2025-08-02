@@ -21,7 +21,7 @@ const Home = () => {
             <span className="wave-hand">👋🏽</span>
           </h1>
           <p className="text-xl md:text-2xl font-bold">
-            Desenvolvedor <span className="text-blue-500">Full Stack</span>
+            Desenvolvedor <span className="text-blue-500">Front-end</span>
           </p>
           <p className="text-lg md:text-xl text-gray-200">
             Transformando ideias em códigos e tomando um cafezinho.
