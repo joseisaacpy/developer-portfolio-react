@@ -24,7 +24,7 @@ const Sobre = () => {
         </h2>
         <p className="text-lg leading-relaxed mb-4">
           Sou um{" "}
-          <strong className="text-blue-600">desenvolvedor Full Stack</strong>{" "}
+          <strong className="text-blue-600">desenvolvedor Front-End</strong>{" "}
           focado em transformar ideias em experiências digitais com
           personalidade. Com o notebook sempre na tomada e uma xícara de café ao
           lado, crio interfaces modernas, funcionais, acessíveis e responsivas.
